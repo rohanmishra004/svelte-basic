@@ -24,7 +24,7 @@
 	<p style="color:{beltColor}">My Belt Color is {beltColor}</p>
 	<button on:click={changeBeltColor}>Change</button>
 	<input on:input={handleInputBelt} type="text" value={beltColor} />
-	<input on:input={handleInputName} type="text" bind:value={name} />
+	<input type="text" bind:value={name} />
 </main>
 
 <style>
