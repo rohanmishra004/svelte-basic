@@ -6,10 +6,16 @@
 		beltColor = beltColor === "black" ? "orange" : "black";
 	}
 
-	function handleInput(e) {
+	function handleInputBelt(e) {
 		e.preventDefault();
 		console.log(e.target.value);
 		beltColor = e.target.value;
+	}
+
+	function handleInputName(e) {
+		e.preventDefault();
+		console.log(e.target.value);
+		name = e.target.value;
 	}
 </script>
 
@@ -17,7 +23,8 @@
 	<h1>Hello {name}!</h1>
 	<p style="color:{beltColor}">My Belt Color is {beltColor}</p>
 	<button on:click={changeBeltColor}>Change</button>
-	<input on:input={handleInput} type="text" />
+	<input on:input={handleInputBelt} type="text" value={beltColor} />
+	<input on:input={handleInputName} type="text" bind:value={name} />
 </main>
 
 <style>
